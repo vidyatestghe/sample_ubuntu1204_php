@@ -1,0 +1,23 @@
+language: php
+
+build_image: shippableimages/ubuntu1204_php:0.0.1
+
+php:
+  - 5.3
+  
+env:
+  - mkdir -p shippable/codecoverage
+  - mkdir -p shippable/testresults
+
+before_install:
+  - export PATH=$HOME/.phpenv/bin:$HOME/.phpenv/extensions:$PATH && eval "$(phpenv init -)"
+  - phpenv global $SHIPPABLE_PHP_VERSION
+  
+install:
+  - php --version
+
+script:
+  - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
+
+
+      
