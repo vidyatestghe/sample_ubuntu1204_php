@@ -15,6 +15,7 @@ before_install:
   - export PATH=$HOME/.phpenv/bin:$HOME/.phpenv/extensions:$PATH && eval "$(phpenv init -)"
   - phpenv global $SHIPPABLE_PHP_VERSION
   - php --version
+  - git --version
 
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
