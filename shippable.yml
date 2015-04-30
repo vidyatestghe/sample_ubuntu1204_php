@@ -22,4 +22,4 @@ script:
 
 archive: true
 
-commit_container: vidyar/sample_ubuntu1204_php
+#commit_container: vidyar/sample_ubuntu1204_php
