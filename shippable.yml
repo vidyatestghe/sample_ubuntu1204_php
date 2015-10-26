@@ -24,3 +24,14 @@ script:
 archive: true
 
 commit_container: vidyar/sample_ubuntu1204_php
+
+
+notifications:
+     email:
+         recipients:
+             - vidya@shippable.com
+             - buildsampletest@gmail.com
+            # - vidyac.raghav@gmail.com
+         on_success: always
+         on_failure: always
+         
