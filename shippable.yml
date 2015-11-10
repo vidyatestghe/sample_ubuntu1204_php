@@ -24,7 +24,7 @@ script:
 #test1
 #test2
 #reset
-#archive: true
+archive: true
 
 #commit_container: vidyar/sample_ubuntu1204_php
 
