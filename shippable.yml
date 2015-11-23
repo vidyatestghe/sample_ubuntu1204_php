@@ -2,6 +2,9 @@ language: php
 
 build_image: shippableimages/ubuntu1204_php
 
+env:
+ - foo=bar
+ - tee=abcd
 
 php:
   - 5.3
