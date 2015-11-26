@@ -1,7 +1,8 @@
 language: php
 
-build_image: shipimg/ubuntu1204_php
-
+#build_image: shipimg/ubuntu1204_php
+env:
+  - secure: TbgMIBXnVPC8KAl0pulQhQG4zQzV9ngdS5RPTvChSdA0NnVVJJP68BOTexuM7oE6BKHjYelAQ3M+YpzNZEfLEUbLpnmRUInjb/nAo0O/5CnFHXX5wzkBKcQSbr1DWduyD7uemuu+QFZocMCgc/tt4l/eRiP5wy1sye5QTy2JhVjc8O0wDznerXvp9UL/eVoNvdk0yLZ0EPm1x54wdOYvk30FUh77mTGntVoUpZV/SmHy2fzuhBwLQSx7e2c2+sXcWzYYa3eKAoZO/mrYwQ9WLomYqXbB/ly3C7BsyC7FND3JKjFyj0ZpfW+aKgtMZckpH5SBHNWHNDGQqzl58Xiq8w==
 php:
   - 5.3
   - 5.4
@@ -9,7 +10,8 @@ php:
 before_script:
   - mkdir -p shippable/codecoverage
   - mkdir -p shippable/testresults
-
+  - echo $key1 and $key2
+  
 before_install:
   - export PATH=$HOME/.phpenv/bin:$HOME/.phpenv/extensions:$PATH && eval "$(phpenv init -)"
   - phpenv global $SHIPPABLE_PHP_VERSION
