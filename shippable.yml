@@ -20,8 +20,11 @@ before_install:
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
 
-
 #test1
 #test2
 #reset
 archive: true
+
+branches:
+ only:
+  - newbr2
